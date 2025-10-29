@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>タイピングチャレンジ</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app" data-state="start">
+      <section class="screen screen--start" aria-label="Start screen">
+        <h1 class="title">タイピングチャレンジ</h1>
+        <p class="notice">プレイ前にローマ字入力に切り替えてください。</p>
+        <button class="btn btn--primary" data-action="start">スタート</button>
+      </section>
+
+      <section class="screen screen--play" aria-label="Game screen">
+        <div class="status-bar">
+          <div class="status-item">
+            <span class="label">タイム</span>
+            <span class="value" data-bind="time">60</span>
+          </div>
+          <div class="status-item">
+            <span class="label">スコア</span>
+            <span class="value" data-bind="score">0</span>
+          </div>
+          <div class="status-item">
+            <span class="label">コンボ</span>
+            <span class="value" data-bind="combo">0</span>
+          </div>
+        </div>
+        <div class="prompt">
+          <div class="prompt__original">
+            <span class="prompt__furigana is-empty" data-bind="promptFurigana"></span>
+            <span class="prompt__text" data-bind="promptOriginal"></span>
+          </div>
+          <div class="prompt__romanized" data-bind="promptRomanized"></div>
+        </div>
+        <input
+          type="text"
+          class="typing-input sr-only"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="none"
+          spellcheck="false"
+          aria-label="Typing input"
+        >
+      </section>
+
+      <section class="screen screen--result" aria-label="Result screen">
+        <h2 class="title">リザルト</h2>
+        <p class="score-display">スコア: <span data-bind="finalScore">0</span></p>
+        <button class="btn btn--primary" data-action="restart">スタートに戻る</button>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
