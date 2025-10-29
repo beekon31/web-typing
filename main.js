@@ -487,9 +487,17 @@
     }
 
     if (state === STATES.START) {
+      if (document.activeElement === startBtn) {
+        return;
+      }
+      event.preventDefault();
       startBtn.focus();
       startBtn.click();
     } else if (state === STATES.RESULT && !isResultPending) {
+      if (document.activeElement === restartBtn) {
+        return;
+      }
+      event.preventDefault();
       restartBtn.focus();
       restartBtn.click();
     }
