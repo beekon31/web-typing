@@ -20,11 +20,11 @@
   const promptRomanizedEl = document.querySelector('[data-bind="promptRomanized"]');
   const finalScoreEl = document.querySelector('[data-bind="finalScore"]');
 
-  const TYPING_SOUND_PATH = "タイピング-メカニカル単3.mp3";
-  const BONUS_SOUND_PATH = "クイズ正解5.mp3";
-  const MISS_SOUND_PATH = "クイズ不正解2.mp3";
-  const BUTTON_SOUND_PATH = "スイッチを押す.wav";
-  const TIMEUP_SOUND_PATH = "試合終了のゴング.mp3";
+  const TYPING_SOUND_PATH = "typing.mp3";
+  const BONUS_SOUND_PATH = "kuizuseikai.mp3";
+  const MISS_SOUND_PATH = "kuizuhuseikai.mp3";
+  const BUTTON_SOUND_PATH = "suittiwoosu.wav";
+  const TIMEUP_SOUND_PATH = "syuuryougongu.mp3";
 
   function createAudioPool(src, options = {}) {
     const { volume = 1, poolSize = 1 } = options;
