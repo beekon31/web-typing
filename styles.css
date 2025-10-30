@@ -59,10 +59,18 @@ body {
   text-align: center;
 }
 
+.screen--start .about {
+  display: none;
+}
+
 .app[data-state="start"] .screen--start,
 .app[data-state="play"] .screen--play,
 .app[data-state="result"] .screen--result {
   display: flex;
+}
+
+.app[data-state="start"] .screen--start .about {
+  display: block;
 }
 
 .title {
